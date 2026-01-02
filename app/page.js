@@ -1,65 +1,73 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.js file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="min-h-screen bg-white text-gray-900">
+      
+      {/* Hero Section */}
+      <section className="py-24 text-center px-6">
+        <h1 className="text-5xl font-bold mb-6">
+          Upgrade Your Desk. Upgrade Your Work.
+        </h1>
+        <p className="text-lg text-gray-600 mb-10 max-w-2xl mx-auto">
+          Discover smarter tools designed to transform your workspace and boost productivity.
+        </p>
+        <button className="bg-black text-white px-8 py-4 rounded-full text-lg hover:bg-gray-800 transition">
+          Shop Smart Desk Essentials
+        </button>
+      </section>
+
+      {/* Featured Products */}
+      <section className="py-20 bg-gray-50 px-6">
+        <h2 className="text-3xl font-semibold text-center mb-12">
+          Featured Smart Desk Products
+        </h2>
+
+        <div className="grid md:grid-cols-5 gap-8 max-w-7xl mx-auto">
+          {[
+            "Multi-Device Wireless Charging Station",
+            "Magnetic Modular Desk Organizer",
+            "Smart RGB Desk Lamp + Clock",
+            "Adjustable Aluminum Laptop Stand",
+            "Cable Management Box + Magnetic Cable Kit",
+          ].map((product) => (
+            <div key={product} className="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
+              <div className="h-32 bg-gray-200 rounded mb-4"></div>
+              <h3 className="font-semibold text-center">{product}</h3>
+            </div>
+          ))}
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      {/* Why JUMBRO */}
+      <section className="py-20 text-center px-6">
+        <h2 className="text-3xl font-semibold mb-10">
+          Why JUMBRO SHIPPING?
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-gray-600">
+          <div>🚀 Faster Productivity</div>
+          <div>🧹 Cleaner Workspace</div>
+          <div>🧠 Smarter Tools</div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20 bg-gray-50 text-center px-6">
+        <h2 className="text-3xl font-semibold mb-10">
+          How It Works
+        </h2>
+        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto text-gray-600">
+          <div>Choose Your Tools</div>
+          <div>Place Your Order</div>
+          <div>Upgrade Your Setup</div>
+        </div>
+      </section>
+
+      {/* Trust Section */}
+      <section className="py-20 text-center px-6">
+        <p className="text-gray-500">
+          Fast Shipping • Secure Payments • Easy Returns
+        </p>
+      </section>
+
+    </main>
   );
 }
